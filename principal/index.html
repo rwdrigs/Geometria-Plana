@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/assets/geometria.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <title>Descobrindo as Áreas</title>
+</head>
+
+<body>
+
+    <div id="header">
+        <!--<div class="container">-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="nav">
+            <a class="navbar-brand" href="#">
+                <img src="/assets/logo.png" alt="logo" class="img-fluid" width="150px">
+            </a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/principal/index.html" target="_blank">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/principal/projeto.html">Projeto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/c/MatemáticaKleyberMelo" target="_blank">Kleyber</a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+    </nav>
+    </div>
+    </div>
+    <!--Principal-->
+    <div id="sobre" class="block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 align-self-center text-center">
+                    <img src="https://img.freepik.com/vetores-gratis/ilustracao-do-conceito-de-aprendizagem-online_114360-6494.jpg?t=st=1646501779~exp=1646502379~hmac=faa105ce3a6ca973b7696d413941c7ba3fd211b1063697b2ac936be7aa13cb87&w=740" class="img-fluid" id="imgsobre"
+                        width="380px" />
+                </div>
+                <div class="col-md-6 align-self-center mb-md-0 mb-4">
+                    <h2 class="title">Descubra as áreas</h2>
+                    <h4 class="subtitle">
+                        BEM-VINDO
+
+                    </h4>
+                    <p>
+                        Esse site irá te explicar como funciona as fórmulas para descobrir a área de uma figura geométrica plana e calcular o resultado para você!
+                    </p>
+                    <div class="select">
+                        <select name="format" id="format">
+                            <option selected disabled>Escolha a Figura</option>
+                            <option value="trianguloretangulo">TRIÂNGULO RETÂNGULO</option>
+                            <option value="circulo">CÍRCULO</option>
+                            <option value="quadrado">QUADRADO</option>
+                            <option value="losango">LOSANGO</option>
+                            <option value="trapezio">TRAPÉZIO</option>
+                            <option value="trianguloequilatero">TRIÂNGULO EQUILÁTERO</option>
+                            <option value="heron">TRIÂNGULO (Heron)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--formulas-->
+
+    <!--Triângulo Retângulo-->
+    <div id="slider" data-conteudo="trianguloretangulo" class="show">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-8 align-self-center mb-md-0 mb-4">
+                    <h1>triângulo retângulo</h1>
+                    <h4 class="mb-4" id="imprimirtr">Para encontrar a área de um triângulo retângulo, basta dividir por 2 o resultado da multiplicação da base (b) pela altura (h)</h4>
+                    <input type="text" id="btr" placeholder="base">
+                    <input type="text" id="atr" placeholder="Altura">
+                    <input type="button" value="CALCULAR" href="#" id="btn" class="btn button-primay btn-primary button" onclick="calcularTR()">
+                </div>
+                <div class="col-md-4 align-self-center">
+                    <img src="/assets/B.png" alt="" class="img-fluid" id="imgtr" width="300px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--CIRCULO-->
+
+    <div id="slider" data-conteudo="circulo">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-8 align-self-center mb-md-0 mb-4">
+                    <h1>Círculo</h1>
+                    <h4 class="mb-4" id="imprimircir">A área de um círculo é pi(<span>π</span>) vezes o raio(R) elevado ao quadrado (A = <span id="pi">π</span> r²)</h4>
+                    <input type="text" id="raio" placeholder="raio">
+                    <input type="button" href="#" id="btn" class="btn button-primay btn-primary button" VALUE="CALCULAR" onclick="calcularCIR()">
+                </div>
+                <div class="col-md-4 align-self-center">
+                    <img src="/assets/circulo.png" alt="" class="img-fluid" id="imgtr" width="300px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Quadrado-->
+    <div id="slider" data-conteudo="quadrado">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-8 align-self-center mb-md-0 mb-4">
+                    <h1>Quadrado</h1>
+                    <h4 class="mb-4" id="imprimirqr">Para encontrar a área de um quadrado, basta multiplicar os dois lados (L)</h4>
+                    <input type="text" id="ladoq" placeholder="LADO">
+                    <input type="button" value="CALCULAR" href="#" id="btn" class="btn button-primay btn-primary button" onclick="calcularQR()">
+                </div>
+                <div class="col-md-4 align-self-center">
+                    <img src="/assets/quadrado.png" alt="" class="img-fluid" id="imgtr" width="300px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Losango-->
+    <div id="slider" data-conteudo="losango">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-8 align-self-center mb-md-0 mb-4">
+                    <h1>losango</h1>
+                    <h4 class="mb-4" id="imprimirlo">Para encontrar a área de um losango, basta multiplicar a base (b) pela altura (h)</h4>
+                    <input type="text" id="blo" placeholder="base">
+                    <input type="text" id="alo" placeholder="altura">
+                    <input type="button" value="CALCULAR" href="#" id="btn" class="btn button-primay btn-primary button" onclick="calcularLO()">
+                </div>
+                <div class="col-md-4 align-self-center">
+                    <img src="/assets/losango.png" alt="" class="img-fluid" id="imgtr" width="300px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Trapézio-->
+
+    <div id="slider" data-conteudo="trapezio">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-8 align-self-center mb-md-0 mb-4">
+                    <h1>TRAPÉZIO</h1>
+                    <h4 class="mb-4" id="imprimirtrap">Para encontrar a área de um trapézio, basta somar as bases (B + <span>b</span>) vezes a altura (H) dividido por dois</h4>
+                    <input type="text" id="btrap" placeholder="base">
+                    <input type="text" id="batrap" placeholder="BASE">
+                    <input type="text" id="atrap" placeholder="Altura">
+                    <input type="button" href="#" value="CALCULAR" id="btn" class="btn button-primay btn-primary button" onclick="calcularTRAP()">
+                </div>
+                <div class="col-md-4 align-self-center">
+                    <img src="/assets/trapezio.png" alt="" class="img-fluid" id="imgtr" width="300px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Triângulo Equilátero-->
+    <div id="slider" data-conteudo="trianguloequilatero">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-8 align-self-center mb-md-0 mb-4">
+                    <h1>triângulo equilátero</h1>
+                    <h4 class="mb-4" id="imprimirte">a área de um triângulo equilátero é dada por
+                        <p>A = (L² . √3) ÷ 4</p>
+                    </h4>
+                    <input type="text" id="ladote" placeholder="lado">
+                    <input type="button" href="#" id="btn" class="btn button-primay btn-primary button" VALUE="CALCULAR" onclick="calcularTE()">
+                </div>
+                <div class="col-md-4 align-self-center">
+                    <img src="/assets/equilatero.png" alt="" class="img-fluid" id="imgtr" width="300px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--HERON-->
+    <div id="slider" data-conteudo="heron">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-8 align-self-center mb-md-0 mb-4">
+                    <h1>triângulo (heron)</h1>
+                    <h4 class="mb-4" id="imprimirtq">Para encontrar a área de um triângulo usando apenas a medida dos lados, utiliza-se a fórmula de heron
+                        <p><span>A = √p . (p - a).(p - b).(p - c)</span></p>
+                    </h4>
+                    <input type="text" id="ladoaq" placeholder="lado a">
+                    <input type="text" id="ladobq" placeholder="lado b">
+                    <input type="text" id="ladocq" placeholder="lado c">
+                    <input type="button" href="#" id="btn" class="btn button-primay btn-primary button" VALUE="CALCULAR" onclick="calcularTQ()">
+                </div>
+                <div class="col-md-4 align-self-center">
+                    <img src="/assets/qualquer.png" alt="" class="img-fluid" id="imgtr" width="300px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/drizxnn" target="_blank" role="button"><img src="/node_modules/bootstrap-icons/icons/twitter.svg" alt=""></a>
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/haterdelol/" target="_blank" role="button"><img src="/node_modules/bootstrap-icons/icons/instagram.svg" alt=""></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/lucaselielrodrigues/" target="_blank" role="button"><img src="/node_modules/bootstrap-icons/icons/linkedin.svg" alt="">
+                </a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/lucrodrigues?tab=overview&from=2021-11-01&to=2021-11-30" target="_blank" role="button"><img src="/node_modules/bootstrap-icons/icons/github.svg" alt=""></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" href="">Lucas Rodrigues</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!--scripts das formulas-->
+    <script src="/js/formulas.js"></script>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

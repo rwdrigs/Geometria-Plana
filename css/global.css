@@ -1,0 +1,167 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+p {
+    color: black;
+}
+
+#sobre {
+    text-align: center;
+    margin-top: 30px;
+}
+
+span {
+    text-transform: lowercase;
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: var(--medium);
+    font-weight: 400;
+}
+
+select {
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0!important;
+    background: var(--dark);
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: var(--yellow);
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: var(--yellow);
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease;
+}
+
+.select:hover::after {
+    color: var(--yellowdarktwo);
+}
+
+#slider:not(.show) {
+    display: none
+}
+
+.button {
+    text-transform: lowercase;
+    font-weight: 500;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+}
+
+.button-primay {
+    background-color: var(--yellow);
+    border-color: var(--brown);
+    color: var(--brown);
+}
+
+.button-primay:hover {
+    background-color: var(--yellowdark);
+    border-color: var(--yellowdark);
+}
+
+#btnprojeto {
+    text-transform: uppercase;
+    border-color: var(--pretofosco);
+    color: var(--pretofosco);
+}
+
+#btnprojeto:hover {
+    background-color: var(--pretofosco);
+    color: var(--yellow);
+    border-color: var(--yellowdark);
+}
+
+#atr,
+#btr,
+#ladoq,
+#btrap,
+#atrap,
+#batrap,
+#ladoaq,
+#ladobq,
+#ladocq,
+#ladote,
+#raio,
+#blo,
+#alo {
+    align-items: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: whitesmoke;
+    border-color: var(--pretofosco);
+    width: 180px;
+    height: 39px;
+    border-style: solid;
+    border-width: 2px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+#btn {
+    padding: 8px;
+    width: 150px;
+    height: 39px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--pretofosco);
+    background: var(--yellow);
+    cursor: pointer;
+}
+
+#btn:hover,
+#btn-dois:hover {
+    background: var(--pretofosco);
+    color: var(--ice);
+    transform: scale(1.01);
+}
